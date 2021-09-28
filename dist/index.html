@@ -2,7 +2,12 @@
 <html>
   <head>
     <script src="header.js"></script>
+    <script type="module" src="carousel.js"></script>
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
+    />
   </head>
   <body>
     <header class="container">
@@ -44,11 +49,13 @@
           </span>
         </h1>
         <p>
-          Want to earn money for creating killer vape social content? Vape Influencer is for you! 
+          Want to earn money for creating killer vape social content? Vape
+          Influencer is for you!
         </p>
 
         <p>
-          Start earning by showcasing your creativity. Sign up today to get access to fast and simple tasks today! 
+          Start earning by showcasing your creativity. Sign up today to get
+          access to fast and simple tasks today!
         </p>
 
         <div class="btn-wrapper">
@@ -61,5 +68,28 @@
       <h2>make money by completing tasks</h2>
       <span>do you vape?</span>
     </div>
+
+
+    <div class="swiper">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide">Slide 1</div>
+        <div class="swiper-slide">Slide 2</div>
+        <div class="swiper-slide">Slide 3</div>
+        ...
+      </div>
+      <!-- If we need pagination -->
+      <div class="swiper-pagination"></div>
+    
+      <!-- If we need navigation buttons -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    
+      <!-- If we need scrollbar -->
+      <div class="swiper-scrollbar"></div>
+    </div>
+
+
   </body>
 </html>
