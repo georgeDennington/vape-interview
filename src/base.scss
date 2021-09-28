@@ -53,6 +53,9 @@ a {
   line-height: 18px;
   padding: 5px 15px;
   border: solid 2px transparent;
+  font-family: $font-proxima;
+  font-size: 16px;
+  line-height: 24px;
 
   &.fill {
     color: $color-white;
@@ -60,7 +63,7 @@ a {
 
     &:hover {
       color: $color-blaze-orange;
-      background-color: $color-white;
+      background-color: transparent;
       border: 2px solid $color-blaze-orange;
     }
   }

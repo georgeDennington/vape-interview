@@ -55,6 +55,9 @@ a:hover {
   line-height: 18px;
   padding: 5px 15px;
   border: solid 2px transparent;
+  font-family: "proxima-nova";
+  font-size: 16px;
+  line-height: 24px;
 }
 .btn.fill {
   color: #ffffff;
@@ -62,7 +65,7 @@ a:hover {
 }
 .btn.fill:hover {
   color: #ff6200;
-  background-color: #ffffff;
+  background-color: transparent;
   border: 2px solid #ff6200;
 }
 .btn.border {
@@ -276,6 +279,7 @@ body {
 }
 header {
   position: relative;
+  z-index: 2;
 }
 header .row {
   align-items: center;
@@ -319,10 +323,10 @@ header .nav {
     opacity: 1;
   }
 }
+header .nav a {
+  color: #ffffff;
+}
 @media only screen and (max-width: 1024px) {
-  header .nav a {
-    color: #ffffff;
-  }
   header .nav .fill {
     background-color: transparent;
   }
@@ -335,11 +339,15 @@ header .nav a {
   font-family: "proxima-nova";
   display: flex;
 }
+header .nav a:hover {
+  color: #ff6200;
+}
 header .nav .chevron {
   width: 15px;
   margin-left: 5px;
   margin-top: 5px;
   display: none;
+  fill: #ffffff;
 }
 @media only screen and (min-width: 1024px) {
   header .nav .chevron {
@@ -443,6 +451,116 @@ header .hamburger-wrapper .bot {
     background-color: #ff6200;
     transform: translate(0, 100%);
     opacity: 1;
+  }
+}
+
+.hero-banner {
+  width: 100%;
+  background-image: url("../assets/Header_Home_mobile.jpg");
+  background-size: cover;
+  background-position: 35% 50%;
+  height: 1100px;
+  position: relative;
+  margin-top: -74px;
+  margin-bottom: 200px;
+}
+@media only screen and (min-width: 1024px) {
+  .hero-banner {
+    background-image: url("../assets/Header_Home_Desktop.jpg");
+  }
+}
+.hero-banner .content-wrapper {
+  position: absolute;
+  left: 25px;
+  top: 60%;
+  width: 80%;
+}
+@media only screen and (min-width: 1024px) {
+  .hero-banner .content-wrapper {
+    transform: none;
+    width: 600px;
+    top: 300px;
+    left: 40%;
+    margin-left: -380px;
+  }
+}
+.hero-banner .content-wrapper h1 {
+  width: 350px;
+  font-size: 65px;
+}
+@media only screen and (min-width: 560px) {
+  .hero-banner .content-wrapper h1 {
+    width: 400px;
+    font-size: 72px;
+  }
+}
+.hero-banner .content-wrapper .btn-wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+@media only screen and (min-width: 560px) {
+  .hero-banner .content-wrapper .btn-wrapper {
+    flex-direction: row;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .hero-banner .content-wrapper .btn-wrapper {
+    justify-content: left;
+  }
+}
+.hero-banner .content-wrapper .btn {
+  width: 100%;
+  margin-top: 10px;
+  padding: 15px 0;
+}
+@media only screen and (min-width: 560px) {
+  .hero-banner .content-wrapper .btn {
+    width: 45%;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .hero-banner .content-wrapper .btn {
+    width: 30%;
+    margin-right: 20px;
+  }
+}
+
+.text-banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: 260px;
+}
+@media only screen and (min-width: 580px) {
+  .text-banner {
+    margin-top: -100px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .text-banner {
+    margin-top: -450px;
+  }
+}
+.text-banner h2 {
+  text-align: center;
+}
+.text-banner span {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(0, -50%);
+  font-family: "Bebas Neue", cursive;
+  font-size: 200px;
+  opacity: 0.15;
+  width: 100%;
+  text-align: center;
+  display: none;
+}
+@media only screen and (min-width: 1024px) {
+  .text-banner span {
+    display: block;
   }
 }
 

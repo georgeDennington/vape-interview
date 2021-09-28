@@ -1,0 +1,108 @@
+.hero-banner {
+  width: 100%;
+  background-image: url("../assets/Header_Home_mobile.jpg");
+  background-size: cover;
+  background-position: 35% 50%;
+  height: 1100px;
+  position: relative;
+  margin-top: -74px;
+  margin-bottom: 200px;
+
+  @media only screen and (min-width: $screen-md) {
+    background-image: url("../assets/Header_Home_Desktop.jpg");
+  }
+
+  .content-wrapper {
+    position: absolute;
+    left: 25px;
+    top: 60%;
+    width: 80%;
+
+    @media only screen and (min-width: $screen-md) {
+      transform: none;
+      width: 600px;
+      top: 300px;
+      left: 40%;
+      margin-left: -380px;
+    }
+
+    h1 {
+      width: 350px;
+      font-size: 65px;
+
+      @media only screen and (min-width: $screen-xs) {
+        width: 400px;
+        font-size: 72px;
+      }
+    }
+
+    .btn-wrapper {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+
+      @media only screen and (min-width: $screen-xs) {
+        flex-direction: row;
+      }
+
+      @media only screen and (min-width: $screen-md) {
+        justify-content: left;
+      }
+    }
+
+    .btn {
+      width: 100%;
+      margin-top: 10px;
+      padding: 15px 0;
+
+      @media only screen and (min-width: $screen-xs) {
+        width: 45%;
+      }
+
+      @media only screen and (min-width: $screen-md) {
+        width: 30%;
+        margin-right: 20px;
+      }
+    }
+  }
+}
+
+.text-banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: 260px;
+
+  @media only screen and (min-width: 580px) {
+    margin-top: -100px;
+  }
+
+  @media only screen and (min-width: $screen-md) {
+    margin-top: -450px;
+  }
+
+  h2 {
+    text-align: center;
+  }
+
+  span {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(0, -50%);
+    font-family: $font-bebas;
+    font-size: 200px;
+    opacity: 0.15;
+    width: 100%;
+    text-align: center;
+    display: none;
+  }
+
+  @media only screen and (min-width: $screen-md) {
+
+    span {
+      display: block;
+    }
+  }
+}
