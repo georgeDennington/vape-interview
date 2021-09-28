@@ -338,6 +338,7 @@ header .nav a {
 header .nav .chevron {
   width: 15px;
   margin-left: 5px;
+  margin-top: 5px;
   display: none;
 }
 @media only screen and (min-width: 1024px) {
