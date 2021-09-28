@@ -1,0 +1,196 @@
+@import "./vars.scss";
+
+header {
+  position: relative;
+
+  .row {
+    align-items: center;
+    display: flex;
+  }
+
+  .logo-wrapper {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+  }
+
+  .title {
+    line-height: 35px;
+    font-size: 35px;
+    font-family: $font-bebas;
+    margin-left: -225px;
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  .nav {
+    margin-left: auto;
+    justify-content: space-between;
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: 100%;
+    right: 0;
+    transition: $global-transition;
+    padding: 0;
+    flex-direction: column;
+    opacity: 0;
+
+    @media only screen and (min-width: $screen-md) {
+      flex-direction: row;
+      transition: none;
+      position: static;
+      height: auto;
+      width: auto;
+      opacity: 1;
+    }
+
+    @media only screen and (max-width: $screen-md) {
+      a {
+        color: $color-white;
+      }
+
+      .fill {
+        background-color: transparent;
+
+        &:hover {
+          color: $color-white;
+        }
+      }
+    }
+
+    a {
+      text-transform: capitalize;
+      font-family: $font-proxima;
+      display: flex;
+    }
+
+    .chevron {
+      width: 15px;
+      margin-left: 5px;
+      display: none;
+
+      @media only screen and (min-width: $screen-md) {
+        display: block;
+      }
+    }
+
+    li {
+      font-size: 16px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      padding: 5px 10px;
+      flex-wrap: wrap;
+
+      @media only screen and (min-width: $screen-md) {
+        padding: initial;
+      }
+
+      .sub-menu {
+        left: 0;
+        top: 100%;
+        width: 100%;
+        padding: 0;
+        opacity: 1;
+        transition: $global-transition;
+
+        @media only screen and (min-width: $screen-md) {
+          position: absolute;
+          opacity: 0;
+          pointer-events: none;
+        }
+
+        li {
+          padding: 5px 0;
+        }
+      }
+
+      &:hover,
+      .sub-menu:hover {
+        .sub-menu {
+          pointer-events: all;
+          display: block;
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  .hamburger-wrapper {
+    cursor: pointer;
+    height: 24px;
+    margin: 0 24px 0 auto;
+    outline: none;
+    position: absolute;
+    right: 0;
+    top: 30px;
+    width: 28px;
+    z-index: 1002;
+
+    @media only screen and (min-width: $screen-md) {
+      display: none;
+    }
+
+    span {
+      background-color: $color-black;
+      display: inline-block;
+      height: 3px;
+      left: 0;
+      position: absolute;
+      transition: $global-transition;
+      width: 100%;
+      border-radius: 3px;
+    }
+
+    .top {
+      top: 0;
+    }
+
+    .mid {
+      top: 50%;
+      transform: translate(0, -1px);
+    }
+
+    .bot {
+      bottom: 0;
+    }
+  }
+
+  @media only screen and (max-width: $screen-md) {
+    &.nav-open {
+      .hamburger-wrapper {
+        position: fixed;
+
+        span {
+          background-color: $color-white;
+        }
+
+        .top {
+          transform: translate(0, 11px) rotate(45deg);
+        }
+
+        .mid {
+          opacity: 0;
+        }
+
+        .bot {
+          transform: translate(0, -11px) rotate(-45deg);
+        }
+      }
+
+      .nav {
+        padding: 10px 0;
+        margin: 0;
+        height: auto;
+        background-color: $color-blaze-orange;
+        transform: translate(0, 100%);
+        opacity: 1;
+      }
+    }
+  }
+}

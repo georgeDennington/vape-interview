@@ -1,0 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@font-face {
+  font-family: "proxima-nova";
+  src: url("../assets/font/Rene\ Bieder\ \ Milliard\ Medium.otf");
+}
+
+//vars
+//fonts
+$font-bebas: "Bebas Neue", cursive;
+$font-proxima: "proxima-nova";
+//color
+$color-blaze-orange: #ff6200;
+$color-downriver: #07223f;
+$color-white: #ffffff;
+$color-black: #000000;
+//transitions
+$global-transition-animation: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+$global-transition-time-slow: 1s;
+$global-transition-time: 0.5s;
+$global-transition-time-fast: 0.25s;
+$global-transition: all $global-transition-animation $global-transition-time;
+//screens
+$screen-sm: 998px;
+$screen-md: 1024px;
+$screen-lg: 1660px;
+//container etc
+$container: 1660px;
+$gutter: 24px
+//end vars

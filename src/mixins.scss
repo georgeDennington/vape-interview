@@ -1,0 +1,15 @@
+@use "sass:math";
+
+@mixin make-grid-columns($columns, $size) {
+  @if $columns > 0 {
+    @for $i from 1 through $columns {
+      .col-#{$size}-#{$i} {
+        flex: 0 0 percentage(math.div($i, $columns));
+        max-width: percentage(math.div($i, $columns));
+      }
+      .offset-#{$size}-#{$i} {
+        margin-left: percentage(math.div($i, $columns));
+      }
+    }
+  }
+}
